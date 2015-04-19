@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
+<link rel="import" href="../../bower_components/core-menu-button/core-menu-button.html">
+<link rel="import" href="../../bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../../bower_components/core-dropdown/core-dropdown.html">
+<link rel="import" href="../../bower_components/core-menu/core-menu.html">
+
+<polymer-element name="collapse-toolbar" attributes="query" noscript>
+  <template>
+    <link rel="stylesheet" href="collapse-toolbar.css">
+
+    <div id="toolbar" layout horizontal center>
+      <!-- When smallScreen is true, hide the links... -->
+      <template if="{{smallScreen}}">
+        <core-menu-button>
+          <core-icon-button icon="menu"></core-icon-button>
+          <core-dropdown class="dropdown" >
+            <core-menu>
+              <content></content>
+            </core-menu>
+          </core-dropdown>
+        </core-menu-button>
+      </template>
+      <!-- ...otherwise display them in the toolbar -->
+      <div class="collapse-toolbar-center">
+        <content></content>
+      </div>
+    </div>
+
+    <core-media-query
+      query="{{query}}"
+      queryMatches="{{smallScreen}}">
+    </core-media-query>
+
+  </template>
+</polymer-element>

@@ -1,69 +1,220 @@
 <!doctype html>
 <html lang="">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>poly foo</title>
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pablo Vilas</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild-->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="bower_components/vegas/dist/vegas.css">
+    <link rel="stylesheet" href="bower_components/vegas/dist/vegas.css">
+    <link rel="stylesheet" href="bower_components/pure/pure.css">
+    <link rel="stylesheet" href="bower_components/pure/grids-responsive.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild-->
 
-  <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-  <!-- endbuild -->
+    <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <!-- endbuild -->
 
-  <!-- will be replaced with elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
-  <!-- endreplace-->
-</head>
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="elements/elements.html">
+    <!-- endreplace-->
+  </head>
 
-<body unresolved fullbleed layout vertical>
-  <template is="auto-binding" id="app">
-
-    <core-drawer-panel>
-
-      <!-- Drawer -->
-      <core-header-panel drawer>
-
-        <!-- Drawer Toolbar -->
-        <core-toolbar>Menu</core-toolbar>
-
-        <!-- Drawer Content -->
-        <core-menu selected="0">
-          <core-item label="Yo"></core-item>
-          <core-item label="Polymer"></core-item>
-          <core-item label="App"></core-item>
-        </core-menu>
-
-      </core-header-panel>
-
-      <!-- Main -->
-      <core-header-panel main>
-
-        <!-- Main Toolbar -->
-        <core-toolbar>
-          <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
-          <span>{{appName}}</span>
-        </core-toolbar>
-
-        <!-- Main Content -->
-        <div class="hero-unit">
-          <yo-greeting></yo-greeting>
-          <p>You now have</p>
-          <yo-list></yo-list>
+  <body unresolved>
+    <collapse-toolbar query="max-width: 650px">
+      <a href="#page-profile">Acerca de</a>
+      <a href="#page-skills">Conocimientos</a>
+      <a href="#page-education">Educación</a>
+      <a href="#page-experience">Experiencia</a>
+      <a href="#page-contact">Contacto</a>
+    </collapse-toolbar>
+    <section id="page-welcome">
+      <div class="header-container">
+        <div class="header">
+          <h1 class="header-head">Pablo Vilas</h1>
+          <p class="header-subhead">Desarrollador de Software</p>
+          <p class="header-contact"><paper-button raised><a href="#page-contact">Contáctame</a></paper-button></p>
         </div>
-      </core-header-panel>
-    </core-drawer-panel>
+      </div>
+    </section>
+    <section id="page-profile">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+          <div class="profile-image">
+            <img class="pure-img" src="images/me.jpg">
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+          <div class="section-content">
+            <h1>Acerca de mí</h1>
+            <p>Nací en un pequeño pueblo llamado Dolores, que se encuentra en Soriano, Uruguay, el último domingo de abril de 1989.</p>
+            <p>A la edad de 16 años, decidí que quería dedicarme a las tecnologías de la información.  Me encanta estar en la vanguardia, dedico mucho tiempo al aprendizaje y evaluación de nuevas metodologías y tecnologías.</p>
+            <p>Tengo entusiasmo por el diseño de software de calidad.  En cuanto a mí, me considero una persona proactiva e innovadora, buscando siempre soluciones elegantes, y manteniendo el interés en las mejores prácticas de programación y gestión de proyectos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="page-skills" class="dark">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="section-content">
+            <h1>Conocimientos</h1>
+            <p>Estas son las cosas que soy capaz de hacer</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <span class="chart" data-percent="85">
+            <span class="percent">85%</span>
+          </span>
+          <h3>Ruby on Rails</h3>
+          <p>Rails es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma de la arquitectura Modelo Vista Controlador (MVC)</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <span class="chart" data-percent="80">
+            <span class="percent">80%</span>
+          </span>
+          <h3>Java EE</h3>
+          <p>Es una plataforma de programación, parte de la plataforma Java, para desarrollar y ejecutar software de aplicaciones en el lenguaje de programación Java.</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <span class="chart" data-percent="75">
+            <span class="percent">75%</span>
+          </span>
+          <h3>Android</h3>
+          <p>Android es un sistema operativo basado en el núcleo Linux. Fue diseñado principalmente para dispositivos móviles con pantalla táctil, como teléfonos inteligentes o tablets</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <span class="chart" data-percent="90">
+            <span class="percent">90%</span>
+          </span>
+          <h3>Node.js</h3>
+          <p>Node.js es un entorno de programación en la capa del servidor, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google</p>
+        </div>
+      </div>
+    </section>
+    <section id="page-education">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="section-content">
+            <h1>Educación</h1>
+            <p>Los lugares donde comencé a aprender</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 center">
+          <h3>Universidad ORT Uruguay - Ingeniería de Sistemas</h3>
+          <p>Carrera diseñado de acuerdo con las normas internacionales establecidas por la Junta de Acreditación de Ingeniería y Tecnología. Transmite la capacidad de diseñar y desarrollar sistemas informáticos de gran tamaño y complejidad. Gracias a eso he aprendido a realizar con éxito la creación de software, consultoría independiente y liderazgo de proyectos.
+            Actualmente cursando 5 año con un PAC del 75%. </p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 center">
+          <h3>Escuela Secundaria Dr. Roberto Taruselli</h3>
+          <p>Aquí es donde di mis primeros pasos para la formación profesional. Adquirí una buena base para afrontar los retos de mi carrera. Egresado con un promedio de 10.</p>
+        </div>
+      </div>
+    </section>
+    <section id="page-experience" class="dark">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="section-content">
+            <h1>Experiencia laboral</h1>
+            <p>Estos son los lugares que he trabajado</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <div class="round">
+            <img src="images/work-1.jpg" alt=""/>
+          </div>
+          <h3>Xionna</h3>
+          <p>Fue mi primer trabajo! Gané un montón de experiencia trabajando como desarrollador Java EE y como líder de equipo. También fue mi primera experiencia en proyectos internacionales. Trabé en el desarrollo de aplicaciones distribuidas con alta E/S</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <div class="round">
+            <img src="images/work-2.jpg" alt=""/>
+          </div>
+          <h3>Gecos</h3>
+          <p>Trabajé como desarrollador Java SE/EE. Mi trabajo era diseñar y desarrollar el front-end de gran y complejo ERP. Fue un gran trabajo y experiencia. Aprendí un montón de cosas pero principalmente amplió mi mente</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <div class="round">
+            <img src="images/work-3.jpg" alt=""/>
+          </div>
+          <h3>Vairix</h3>
+          <p>Desarrollador Ruby on Rails. Utilicé las últimas y mejores tecnologías y metodologías, como Scrum, que es un marco de desarrollo de software ágil. Participe en el desarrollo de una red social para artistas y compositores</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 center">
+          <div class="round">
+            <img src="images/work-4.jpg" alt=""/>
+          </div>
+          <h3>PedidosYa</h3>
+          <p>Buscando nuevos desafíos me uní al equipo de PedidosYa. Me desempeño como desarrollador Node.js y Grails. Soy el responsable de los sistemas de recepción de pedidos y la aplicación del call center</p>
+        </div>
+      </div>
+    </section>
+    <section id="page-contact">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="section-content">
+            <h1>Contacto</h1>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 center">
+          <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <p>
+              <svg width="16" height="16" viewBox="512 256 1024 1536" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1280 768q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm256 0q0 109-33 179l-364 774q-16 33-47.5 52t-67.5 19-67.5-19-46.5-52l-365-774q-33-70-33-179 0-212 150-362t362-150 362 150 150 362z"></path>
+              </svg>
+              Montevideo, Uruguay</p>
+            <p>
+              <svg width="16" height="16" viewBox="320 256 1408 1408" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1728 1368q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z"></path>
+              </svg>
+              (+598) 27 067 480 | (+598) 91 239 709
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="256 256 1536 1536" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1429 1191q0-50-19.5-91.5t-48.5-68.5-73-49-82.5-34-87.5-23l-104-24q-30-7-44-10.5t-35-11.5-30-16-16.5-21-7.5-30q0-77 144-77 43 0 77 12t54 28.5 38 33.5 40 29 48 12q47 0 75.5-32t28.5-77q0-55-56-99.5t-142-67.5-182-23q-68 0-132 15.5t-119.5 47-89 87-33.5 128.5q0 61 19 106.5t56 75.5 80 48.5 103 32.5l146 36q90 22 112 36 32 20 32 60 0 39-40 64.5t-105 25.5q-51 0-91.5-16t-65-38.5-45.5-45-46-38.5-54-16q-50 0-75.5 30t-25.5 75q0 92 122 157.5t291 65.5q73 0 140-18.5t122.5-53.5 88.5-93.5 33-131.5zm363 217q0 159-112.5 271.5t-271.5 112.5q-130 0-234-80-77 16-150 16-143 0-273.5-55.5t-225-150-150-225-55.5-273.5q0-73 16-150-80-104-80-234 0-159 112.5-271.5t271.5-112.5q130 0 234 80 77-16 150-16 143 0 273.5 55.5t225 150 150 225 55.5 273.5q0 73-16 150 80 104 80 234z"></path>
+              </svg>
+              pablovilas89
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="128 384 1792 1408" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1792 1632v-768q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5-102.5 24.5h-2q-48 0-102.5-24.5t-86.5-48.5-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5h-1472q-13 0-22.5 9.5t-9.5 22.5q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5 50.5 27.5 43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5t46.5-131.5zm128-37v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z"></path>
+              </svg>
+              pablovilas89@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 center">
+          <form action="#" class="contact-form pure-form pure-form-stacked">
+            <core-field center horizontal layout>
+              <input placeholder="Tu nombre" flex>
+            </core-field>
+            <core-field center horizontal layout>
+              <input placeholder="Tu email" flex>
+            </core-field>
+            <core-field center horizontal layout>
+              <textarea placeholder="Mensaje" rows="6" flex></textarea>
+            </core-field>
+            <core-field>
+              <paper-button id="send-message" raised role="button">Enviar mensaje</paper-button>
+            </core-field>
 
-  </template>
-
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
-</body>
+          </form>
+          <paper-toast id="message-toast" class="capsule core-transition core-transition-bottom toast-message" text="Mensaje enviado!" style="display: none;" role="status" touch-action="none" tabindex="-1"></paper-toast>
+        </div>
+      </div>
+    </section>
+    <!-- build:js scripts/app.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/vegas/dist/vegas.js"></script>
+    <script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- endbuild-->
+  </body>
 
 </html>
