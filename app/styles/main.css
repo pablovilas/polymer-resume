@@ -17,6 +17,10 @@ section {
   background: #ffffff;
 }
 
+core-animated-pages {
+  background: white;
+}
+
 #page-welcome {
   background: none;
 }
@@ -119,15 +123,20 @@ collapse-toolbar {
   left: 0;
 }
 
-.contact-form > *{
+.contact-form > * {
   margin: 20px;
 }
 
-.contact-form > core-field > input {
+.contact-form > core-field > paper-input {
   height: 50px;
+  width: 100%;
 }
 
-.contact-form > core-field> paper-button {
+.contact-form > core-field > paper-input-decorator {
+  width: 100%;
+}
+
+.contact-form > core-field > paper-button {
   background: #f1625e;
   text-transform: none;
   color: #ffffff;
@@ -136,6 +145,11 @@ collapse-toolbar {
   height: 50px;
   margin: 0;
   font-size: 1.3em;
+}
+
+.contact-form textarea {
+  box-shadow: none;
+  border: none;
 }
 
 .contact-info > p {
@@ -148,6 +162,13 @@ collapse-toolbar {
   outline: none;
   z-index: 12;
   box-sizing: border-box;
+}
+
+body > paper-fab {
+  position: fixed;
+  z-index: 5;
+  right: 15px;
+  bottom: 15px;
 }
 
 @media screen and (min-width: 1em) {
